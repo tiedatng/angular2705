@@ -1,0 +1,33 @@
+<div class="container">
+    <div class="row justify-content-center">
+        <div class="col-6">
+            <h3 class="text-center">Create an Account</h3>
+            <form (submit)="onSignup()" [formGroup]="formSignup">
+                <div class="form-group">
+                    <label>Email:</label>
+                    <input type="email" formControlName="email" class="form-control" placeholder="Email">
+                    <small *ngIf="!isValidInput('email')">Email invalid</small>
+                </div>
+                <div class="form-group">
+                    <label>Fullname:</label>
+                    <input type="text" formC class="form-control" placeholder="Fullname">
+                </div>
+                <div class="form-group">
+                    <label>Age:</label>
+                    <input type="text" class="form-control" placeholder="Age">
+                </div>
+                <div class="form-group">
+                    <label>Password:</label>
+                    <input type="password" class="form-control" placeholder="Password">
+                </div>
+                <div class="form-group">
+                    <label>Confirmation Password:</label>
+                    <input type="password" class="form-control" placeholder="Confirm password">
+                </div>
+                <div class="form-group">
+                    <button class="btn btn-primary">Sign Up</button>
+                </div>
+            </form>
+        </div>
+    </div>
+</div>

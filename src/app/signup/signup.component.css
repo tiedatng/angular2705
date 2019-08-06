@@ -1,0 +1,9 @@
+input.ng-invalid.ng-touched{
+    border-color: red
+}
+input.ng-invalid.ng-touched:focus{
+    box-shadow: 0 0 0 0.1rem rgba(250, 170, 181, 0.904)
+}
+small{
+    color: red
+}

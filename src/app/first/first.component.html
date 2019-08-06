@@ -1,0 +1,30 @@
+<input type="text" #txtName placeholder="Enter name">
+<button (click)="getDataInput(txtName)">Get Data</button>
+<h4> {{ name }} </h4>
+<h4> {{ txtName.value }} </h4>
+<br>
+
+<input type="text" #txtAge placeholder="Enter Age"
+(keyup)="getData(txtAge)">
+<!-- number: pipe -->
+<p>{{ age | number}}</p>
+<p>{{ txtAge.value }}</p>
+<input type="text" placeholder="Enter School"
+[(ngModel)]="txtSchool">
+
+<hr>
+
+<p>{{txtSchool}}</p>
+<ol type="A">
+    <li *ngFor="let item of arrNumber">{{ item }}</li>
+</ol>
+
+<p>{{ arrNumber }}</p>
+<p *ngIf="1==1; else dataElse">DK is true</p>
+<ng-template #dataElse>
+    <p>DK is false</p>
+</ng-template>
+<!-- item >= 10 ? li color red : li color blue -->
+
+
+<hr>
